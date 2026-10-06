@@ -9,11 +9,20 @@ A specialized Python graph algorithm library packaging assignment for MSU Denver
 
 ## Installation
 
+```bash
+pip install graphs_delagarza
+```
+
+### For development
+
 Ensure your local virtual environment is activated, then execute an editable local installation from the project root directory:
+
+Clone the repo, then from the project root:
 
 ```bash
 pip install -e .
 ```
+
 
 ## Usage
 
@@ -29,12 +38,14 @@ graph = {
 }
 
 # 1. Execute Shortest Path Routing
-shortest_paths = dijkstra(graph, 'A')
-print("Dijkstra Distances:", shortest_paths)
+dist, path = dijkstra(graph, 'A')
+print("Dijkstra Distances:", dist)
+print("Dijkstra Paths:", path)
 
 # 2. Execute Graph Node Traversal
 visited_order = bfs(graph, 'A')
 print("BFS Visited Order:", visited_order)
+```
 
 ## Repo Link
 URL for your GitHub repository: https://github.com/jdelagar/26FCS3250-002-hwk-5
